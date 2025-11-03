@@ -135,6 +135,26 @@
         </dl>
     </aside>
     <button id="abrirDialogo">Reservar mesa</button>
+
+    <dialog id="reservaDialogo">
+        <h3>Solicitud de reserva</h3>
+        <ul>
+            <li>Máximo 6 personas por reserva.</li>
+            <li>15 minutos de cortesía.</li>
+            <li>Se ruega puntualidad para garantizar el servicio.</li>
+            <li>Indica alergias o intolerancias al hacer la reserva.</li>
+        </ul>
+        <button id="cerrarDialogo">Cerrar</button>
+    </dialog>
+
+    <script>
+        const abrir = document.getElementById('abrirDialogo');
+        const cerrar = document.getElementById('cerrarDialogo');
+        const dialogo = document.getElementById('reservaDialogo');
+
+        abrir.addEventListener('click', () => dialogo.showModal());
+        cerrar.addEventListener('click', () => dialogo.close());
+    </script>
 </body>
 
 </html>
